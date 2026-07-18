@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" ng-app="portfolioApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Pyanz Jheo Quiros, a software developer based in Cebu City."
+    />
+    <title>Pyanz Jheo Quiros | Software Developer</title>
+    <script src="./assets/angular.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body ng-controller="PortfolioController as vm">
+    <main class="page-shell">
+      <article class="portfolio-card" aria-labelledby="profile-name">
+        <header class="name-header">
+          <div>
+            <span class="eyebrow">Portfolio / {{ vm.currentYear }}</span>
+            <h1 id="profile-name">{{ vm.profile.name }}</h1>
+          </div>
+          <span class="initials" aria-hidden="true">PJQ</span>
+        </header>
+
+        <section class="profile-zone" aria-label="Profile">
+          <div class="character-wrap">
+            <div class="pixel-grid" aria-hidden="true"></div>
+            <div
+              class="profile-image-switch"
+              tabindex="0"
+              aria-label="Pixel-art portrait. Hover or focus to see the full-body pixel character."
+            >
+              <img
+                class="profile-photo profile-pixel-portrait"
+                src="./assets/profile-smile.gif"
+                alt="Animated pixel-art portrait of Pyanz Jheo Quiros smiling"
+              />
+              <img
+                class="profile-pixel profile-full-body"
+                src="./assets/character-wave.gif"
+                alt="Animated full-body pixel character of Pyanz waving in a black shirt and light blue jeans"
+              />
+              <span class="image-hint">
+                <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                Hover for full-body view
+              </span>
+            </div>
+          </div>
+
+          <div class="profile-details">
+            <div class="status-row">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>{{ vm.profile.availability }}</span>
+            </div>
+
+            <p class="role">{{ vm.profile.role }}</p>
+            <p class="intro">{{ vm.profile.intro }}</p>
+
+            <dl class="quick-details">
+              <div ng-repeat="detail in vm.profile.details track by detail.label">
+                <dt>{{ detail.label }}</dt>
+                <dd>{{ detail.value }}</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <div class="section-divider" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="social-wrap">
+          <div class="social-row" aria-label="Social links">
+            <span class="social-label">Connect</span>
+            <a
+              ng-repeat="social in vm.socialLinks track by social.name"
+              ng-href="{{ social.url }}"
+              target="{{ social.external ? '_blank' : '_self' }}"
+              rel="noopener noreferrer"
+              aria-label="{{ social.name }}"
+            >
+              <i ng-class="social.icon" aria-hidden="true"></i>
+              <span>{{ social.name }}</span>
+            </a>
+          </div>
+        </div>
+
+        <section class="work-zone" aria-label="Projects and skills">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Selected work</span>
+              <h2>Projects &amp; experience</h2>
+            </div>
+            <span class="project-count">{{ vm.padNumber(vm.projects.length) }}</span>
+          </div>
+
+          <div class="work-grid">
+            <div class="work-content">
+              <div class="project-list" aria-label="Project list">
+                <button
+                  type="button"
+                  class="project"
+                  ng-click="vm.openProject(project)"
+                  ng-repeat="project in vm.getProjectPage() track by project.id"
+                >
+                  <div class="project-main">
+                    <div class="project-topline">
+                      <span class="project-number">{{ vm.padNumber((vm.projectPage - 1) * vm.pageSize + $index + 1) }}</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </div>
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.shortDescription }}</p>
+                    <div class="tags" aria-label="Project technologies">
+                      <span ng-repeat="tech in project.tech track by tech">{{ tech }}</span>
+                    </div>
+                  </div>
+
+                  <span class="project-preview" aria-hidden="true">
+                    <img ng-src="{{ project.image }}" alt="" />
+                    <span class="preview-copy">
+                      <span class="preview-label">Project preview</span>
+                      <strong>{{ project.previewTitle }}</strong>
+                      <span>{{ project.preview }}</span>
+                      <small>Click for full details</small>
+                    </span>
+                  </span>
+                </button>
+              </div>
+              <nav class="content-pagination" ng-if="vm.projects.length > vm.pageSize" aria-label="Project pages">
+                <button type="button" ng-click="vm.setPage('projects', vm.projectPage - 1)" ng-disabled="vm.projectPage === 1" aria-label="Previous project page">
+                  <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <span>Page {{ vm.projectPage }} / {{ vm.pageCount(vm.projects) }}</span>
+                <button type="button" ng-click="vm.setPage('projects', vm.projectPage + 1)" ng-disabled="vm.projectPage === vm.pageCount(vm.projects)" aria-label="Next project page">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </nav>
+
+              <section class="blog-section" aria-labelledby="blog-heading">
+                <div class="subsection-heading">
+                  <div>
+                    <span class="eyebrow">Writing &amp; notes</span>
+                    <h2 id="blog-heading">Blogs</h2>
+                  </div>
+                  <span class="project-count">{{ vm.padNumber(vm.blogs.length) }}</span>
+                </div>
+                <div class="blog-grid">
+                  <button
+                    type="button"
+                    class="blog-card"
+                    ng-repeat="blog in vm.getBlogPage() track by blog.id"
+                    ng-click="vm.openBlog(blog)"
+                  >
+                    <div class="blog-meta">
+                      <span>Published</span>
+                      <span>{{ vm.blogPostedAgo(blog) }}</span>
+                    </div>
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.excerpt }}</p>
+                    <div class="blog-footer">
+                      <div class="blog-tags">
+                        <span ng-repeat="tag in blog.tags track by tag">{{ tag }}</span>
+                      </div>
+                      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                  </button>
+                </div>
+                <nav class="content-pagination" ng-if="vm.blogs.length > vm.pageSize" aria-label="Blog pages">
+                  <button type="button" ng-click="vm.setPage('blogs', vm.blogPage - 1)" ng-disabled="vm.blogPage === 1" aria-label="Previous blog page">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                  </button>
+                  <span>Page {{ vm.blogPage }} / {{ vm.pageCount(vm.blogs) }}</span>
+                  <button type="button" ng-click="vm.setPage('blogs', vm.blogPage + 1)" ng-disabled="vm.blogPage === vm.pageCount(vm.blogs)" aria-label="Next blog page">
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </nav>
+              </section>
+            </div>
+
+            <aside class="background-panel" aria-label="Education and skills">
+              <section class="experience-card">
+                <div class="side-title">
+                  <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                  <span>Work experience</span>
+                </div>
+                <div class="history-list">
+                  <article class="history-item" ng-repeat="experience in vm.workExperiences track by $index">
+                    <div class="experience-heading">
+                      <h3>{{ experience.role }}</h3>
+                      <span class="work-date">
+                        {{ vm.workDateRange(experience) }}
+                        <small ng-if="vm.workDuration(experience)">{{ vm.workDuration(experience) }}</small>
+                      </span>
+                    </div>
+                    <p class="experience-company">{{ experience.company }}</p>
+                    <p>{{ experience.description }}</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="education-card">
+                <div class="side-title">
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                  <span>Education</span>
+                </div>
+                <div class="history-list">
+                  <article class="history-item" ng-repeat="education in vm.educationHistory track by $index">
+                    <div class="experience-heading">
+                      <h3>{{ education.course }}</h3>
+                      <span>{{ education.period }}</span>
+                    </div>
+                    <p class="education-location">{{ education.school }} · {{ education.location }}</p>
+                    <p>{{ education.description }}</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="skill-section">
+                <div class="side-title">
+                  <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+                  <span>Skills</span>
+                </div>
+                <div class="skill-grid">
+                  <div class="skill" ng-repeat="skill in vm.skills track by skill.name">
+                    <i ng-class="skill.icon" aria-hidden="true"></i>
+                    <span>{{ skill.name }}</span>
+                  </div>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <div
+      class="modal-backdrop"
+      ng-if="vm.selectedProject"
+      ng-click="vm.closeProject()"
+      role="presentation"
+    >
+      <section
+        class="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        ng-click="$event.stopPropagation()"
+      >
+        <button
+          type="button"
+          class="modal-close"
+          ng-click="vm.closeProject()"
+          aria-label="Close project details"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <span class="modal-kicker">{{ vm.selectedProject.category }} / {{ vm.selectedProject.year }}</span>
+        <h2 id="project-modal-title">{{ vm.selectedProject.name }}</h2>
+        <div
+          class="modal-gallery"
+          ng-class="{ 'is-first': vm.activeSlide === 0 }"
+          aria-label="Project image gallery"
+        >
+          <img
+            class="modal-image"
+            ng-repeat="image in vm.selectedProject.images track by $index"
+            ng-class="{ active: vm.activeSlide === $index }"
+            ng-src="{{ image.src }}"
+            alt="{{ image.alt }}"
+            aria-hidden="{{ vm.activeSlide !== $index }}"
+          />
+
+          <button
+            type="button"
+            class="gallery-arrow gallery-previous"
+            ng-click="vm.previousSlide()"
+            aria-label="Previous project image"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            type="button"
+            class="gallery-arrow gallery-next"
+            ng-click="vm.nextSlide()"
+            aria-label="Next project image"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="gallery-pagination" role="tablist" aria-label="Project images">
+          <button
+            type="button"
+            ng-repeat="image in vm.selectedProject.images track by $index"
+            ng-class="{ active: vm.activeSlide === $index }"
+            ng-click="vm.goToSlide($index)"
+            role="tab"
+            aria-selected="{{ vm.activeSlide === $index }}"
+            aria-label="Show project image {{ $index + 1 }}"
+          ></button>
+        </div>
+        <p class="modal-summary">{{ vm.selectedProject.description }}</p>
+
+        <div class="modal-detail-grid">
+          <div>
+            <span>Challenge</span>
+            <p>{{ vm.selectedProject.challenge }}</p>
+          </div>
+          <div>
+            <span>Solution</span>
+            <p>{{ vm.selectedProject.solution }}</p>
+          </div>
+        </div>
+
+        <div class="modal-tech">
+          <span ng-repeat="tech in vm.selectedProject.tech track by tech">{{ tech }}</span>
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="modal-backdrop"
+      ng-if="vm.selectedBlog"
+      ng-click="vm.closeBlog()"
+      role="presentation"
+    >
+      <article
+        class="blog-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="blog-modal-title"
+        ng-click="$event.stopPropagation()"
+      >
+        <button
+          type="button"
+          class="modal-close"
+          ng-click="vm.closeBlog()"
+          aria-label="Close blog article"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <span class="modal-kicker">Blog / {{ vm.blogPostedAgo(vm.selectedBlog) }}</span>
+        <h2 id="blog-modal-title">{{ vm.selectedBlog.title }}</h2>
+        <div class="blog-modal-meta">
+          <span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ vm.blogPostedAgo(vm.selectedBlog) }}</span>
+          <span ng-repeat="tag in vm.selectedBlog.tags track by tag">{{ tag }}</span>
+        </div>
+        <p class="blog-lead">{{ vm.selectedBlog.excerpt }}</p>
+        <div class="blog-body">
+          <p ng-repeat="paragraph in vm.selectedBlog.paragraphs track by $index">{{ paragraph }}</p>
+        </div>
+      </article>
+    </div>
+
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

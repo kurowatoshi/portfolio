@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" ng-app="contentEditorApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Portfolio JSON Editor</title>
+    <script src="./assets/angular.min.js"></script>
+    <link rel="stylesheet" href="./editor.css" />
+  </head>
+  <body ng-controller="ContentEditorController as vm">
+    <main class="editor-shell">
+      <header class="editor-header">
+        <div>
+          <span class="eyebrow">Local content helper</span>
+          <h1>Portfolio JSON Editor</h1>
+          <p>Add, edit, or delete content, then save the updated JSON file into <code>public/content</code>.</p>
+        </div>
+        <a href="./index.html">View portfolio <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      </header>
+
+      <aside class="safety-note">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <p>This page has no account system and cannot update the published portfolio. It only edits data in your browser and creates JSON files for you to save locally.</p>
+      </aside>
+
+      <section class="content-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Single JSON workspace</span>
+            <h2>All portfolio content</h2>
+          </div>
+          <div class="panel-actions">
+            <button type="button" ng-click="vm.copyJson()"><i class="fa-regular fa-copy" aria-hidden="true"></i> Copy JSON</button>
+            <button type="button" class="primary" ng-click="vm.showJson()"><i class="fa-solid fa-code" aria-hidden="true"></i> Show portfolio.json</button>
+          </div>
+        </div>
+
+        <p class="status" ng-if="vm.status">{{ vm.status }}</p>
+
+        <section class="editor-group" ng-repeat="section in vm.sections track by section.key">
+          <div class="group-heading">
+            <div><i ng-class="section.icon" aria-hidden="true"></i><h3>{{ section.label }}</h3><span>{{ section.key === 'profile' ? '01' : vm.pad(vm.items(section.key).length) }}</span></div>
+            <button type="button" ng-if="section.key !== 'profile'" ng-click="vm.startAdd(section.key)"><i class="fa-solid fa-plus" aria-hidden="true"></i> Add {{ section.singular }}</button>
+            <button type="button" ng-if="section.key === 'profile'" ng-click="vm.startEdit(section.key, 0)"><i class="fa-solid fa-pen" aria-hidden="true"></i> Edit profile</button>
+          </div>
+
+          <div class="item-grid" ng-if="section.key !== 'profile'">
+            <article class="editor-item" ng-repeat="item in vm.items(section.key) track by (item.id || $index)">
+              <span class="item-number">{{ vm.pad($index + 1) }}</span>
+              <h3>{{ vm.itemTitle(item) }}</h3>
+              <p>{{ vm.itemDescription(item) }}</p>
+              <div class="item-actions">
+                <button type="button" ng-click="vm.startEdit(section.key, $index)">Edit</button>
+                <button type="button" class="danger" ng-click="vm.remove(section.key, $index)">Delete</button>
+              </div>
+            </article>
+          </div>
+
+          <article class="profile-preview" ng-if="section.key === 'profile'">
+            <span>{{ vm.site.profile.availability }}</span>
+            <h3>{{ vm.site.profile.name }}</h3>
+            <strong>{{ vm.site.profile.role }}</strong>
+            <p>{{ vm.site.profile.intro }}</p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <div class="editor-backdrop" ng-if="vm.form" ng-click="vm.closeForm()">
+      <form class="entry-form" ng-submit="vm.saveEntry()" ng-click="$event.stopPropagation()">
+        <button type="button" class="close-form" ng-click="vm.closeForm()" aria-label="Close form"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <span class="eyebrow">{{ vm.editIndex === -1 ? 'New entry' : 'Update entry' }}</span>
+        <h2>{{ vm.currentSection().singular }}</h2>
+
+        <div class="form-grid">
+          <label ng-repeat="field in vm.currentFields()" ng-class="{ wide: field.wide }">
+            {{ field.label }}
+            <textarea ng-if="field.type === 'textarea'" ng-model="vm.form[field.key]" rows="{{ field.rows || 3 }}" ng-required="field.required"></textarea>
+            <input ng-if="field.type !== 'textarea'" ng-attr-type="{{ field.type || 'text' }}" ng-model="vm.form[field.key]" ng-model-options="{ timezone: field.type === 'month' ? 'UTC' : undefined }" ng-required="field.required" />
+            <small ng-if="field.help">{{ field.help }}</small>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" ng-click="vm.closeForm()">Cancel</button>
+          <button type="submit" class="primary">Save entry</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="editor-backdrop" ng-if="vm.jsonPreview" ng-click="vm.closeJson()">
+      <section class="json-modal" role="dialog" aria-modal="true" aria-labelledby="json-modal-title" ng-click="$event.stopPropagation()">
+        <button type="button" class="close-form" ng-click="vm.closeJson()" aria-label="Close JSON preview"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <span class="eyebrow">Ready to copy</span>
+        <h2 id="json-modal-title">{{ vm.outputFilename() }}</h2>
+        <p>Copy this code and replace the contents of <code>public/content/{{ vm.outputFilename() }}</code>.</p>
+        <pre><code>{{ vm.jsonPreview }}</code></pre>
+        <div class="form-actions">
+          <button type="button" ng-click="vm.closeJson()">Close</button>
+          <button type="button" class="primary" ng-click="vm.copyPreview()"><i class="fa-regular fa-copy" aria-hidden="true"></i> {{ vm.copyLabel }}</button>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./editor.js"></script>
+  </body>
+</html>
