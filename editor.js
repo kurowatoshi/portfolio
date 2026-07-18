@@ -2,7 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const app = window.angular.module("contentEditorApp", []);
 
-app.controller("ContentEditorController", function ContentEditorController($http, $scope, $window) {
+app.controller("ContentEditorController", ["$http", "$scope", "$window", function ContentEditorController($http, $scope, $window) {
   const vm = this;
 
   this.section = "projects";
@@ -257,4 +257,4 @@ app.controller("ContentEditorController", function ContentEditorController($http
       vm.status = `${vm.outputFilename()} copied. Paste it into public/content/portfolio.json.`;
     });
   };
-});
+}]);

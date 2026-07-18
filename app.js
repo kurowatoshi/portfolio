@@ -2,7 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const app = window.angular.module("portfolioApp", []);
 
-app.controller("PortfolioController", function PortfolioController($document, $http, $scope) {
+app.controller("PortfolioController", ["$document", "$http", "$scope", function PortfolioController($document, $http, $scope) {
   const vm = this;
 
   this.currentYear = new Date().getFullYear();
@@ -259,4 +259,4 @@ app.controller("PortfolioController", function PortfolioController($document, $h
     { name: "JavaScript", icon: "fa-brands fa-js" },
     { name: "UI Design", icon: "fa-solid fa-layer-group" },
   ];
-});
+}]);
