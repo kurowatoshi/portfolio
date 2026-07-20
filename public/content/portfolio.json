@@ -2,7 +2,7 @@
   "projects": [
     {
       "year": "2025",
-      "image": "https://private-user-images.githubusercontent.com/121880938/419060842-2c64f4b3-b35f-446a-8b07-f9c38276679d.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDYwODQyLTJjNjRmNGIzLWIzNWYtNDQ2YS04YjA3LWY5YzM4Mjc2Njc5ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02N2IwNzViNjMyZmM4YWM1ODcxODEyOWJjZWZlYmI5ZTM4OWE1ZmU5OGMyNzVlMWQ5MmViMjBmM2I2NDMzMzI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.lMe1_DcEV4Qh9lVsRgtTDb1wDFS7MKbh-YgvS7J-suU",
+      "image": "./assets/brgylink/dashboard.png",
       "category": "Web application",
       "name": "BrgyLink",
       "shortDescription": "A simple information and service portal designed for barangays, built using Bootstrap 5 and ASP.NET Core Razor Pages with C#. The project provides a user-friendly interface for barangay management and services.",
@@ -22,24 +22,28 @@
       ],
       "images": [
         {
-          "src": "https://private-user-images.githubusercontent.com/121880938/419059525-7ad96f11-0915-4346-b977-49b29c837d98.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDU5NTI1LTdhZDk2ZjExLTA5MTUtNDM0Ni1iOTc3LTQ5YjI5YzgzN2Q5OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZjg0NzkxYmY4Yzg0MTE1OWFjZmI4MjNhMjcxZDc4MWNjOWI3YjBjYzE5OGVjNTVlZGYwYzJjZjBkNzhmZGYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.6lbSrHrdVjONOPBkg1xXtE-vFpRBHHFjqKQIFhA22Aw",
-          "alt": "BrgyLink"
+          "src": "./assets/brgylink/dashboard.png",
+          "alt": "BrgyLink administration dashboard"
         },
         {
-          "src": "https://private-user-images.githubusercontent.com/121880938/419059608-d2490f84-e86e-4da8-ac67-1f3a72398066.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDU5NjA4LWQyNDkwZjg0LWU4NmUtNGRhOC1hYzY3LTFmM2E3MjM5ODA2Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNjllZDAyMDVmY2I4NzBlNjYzOGJkY2M3YmQ0ZDJiZWIxMzIzNjg5Y2JmODU0M2Q5MmM5Y2Y2MmI5MWI1ZjZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.1w6Bhq4VxRXnnoipr4GWngp7Z7Oz_6AEYivjv13TJ90",
-          "alt": "BrgyLink"
+          "src": "./assets/brgylink/homepage.png",
+          "alt": "BrgyLink homepage"
         },
         {
-          "src": "https://private-user-images.githubusercontent.com/121880938/419059866-b52c2187-c58b-495f-ad2e-0f5c546e42ce.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDU5ODY2LWI1MmMyMTg3LWM1OGItNDk1Zi1hZDJlLTBmNWM1NDZlNDJjZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MzBmZTA5MGYwZGVkMDEwYjI4YjM0MjUwOTg3YjYyOGJiMzJhYWJkZWExMTQyN2Y4YjEyZDA2N2NlY2JlM2RjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.uTpTQctdmcsaeZOF5Rn3xOftEeyB2lmh-Eouz14vAds",
-          "alt": "BrgyLink"
+          "src": "./assets/brgylink/homepage1.png",
+          "alt": "BrgyLink homepage information"
         },
         {
-          "src": "https://private-user-images.githubusercontent.com/121880938/419060228-29b16db0-71dd-4da5-b15c-fc8c07a4bceb.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDYwMjI4LTI5YjE2ZGIwLTcxZGQtNGRhNS1iMTVjLWZjOGMwN2E0YmNlYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04OTg5ZTQ3MjFlOWFkY2RkNjdiMzdkODk5NTJkZWNiOWEyYWU4MDE3MTk3MDc2ODQxYzAwN2FlMTdjNzAyZDA1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.AWMvM1D6QIk2pePN3-4VPlThdRG1x45OW80T2CUxGAA",
-          "alt": "BrgyLink"
+          "src": "./assets/brgylink/services.png",
+          "alt": "BrgyLink barangay services"
         },
         {
-          "src": "https://private-user-images.githubusercontent.com/121880938/419060842-2c64f4b3-b35f-446a-8b07-f9c38276679d.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODQ1MTY5MzUsIm5iZiI6MTc4NDUxNjYzNSwicGF0aCI6Ii8xMjE4ODA5MzgvNDE5MDYwODQyLTJjNjRmNGIzLWIzNWYtNDQ2YS04YjA3LWY5YzM4Mjc2Njc5ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcyMFQwMzAzNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02N2IwNzViNjMyZmM4YWM1ODcxODEyOWJjZWZlYmI5ZTM4OWE1ZmU5OGMyNzVlMWQ5MmViMjBmM2I2NDMzMzI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.lMe1_DcEV4Qh9lVsRgtTDb1wDFS7MKbh-YgvS7J-suU",
-          "alt": "BrgyLink"
+          "src": "./assets/brgylink/about.png",
+          "alt": "BrgyLink about page"
+        },
+        {
+          "src": "./assets/brgylink/cert.png",
+          "alt": "BrgyLink certificate application"
         }
       ]
     }
