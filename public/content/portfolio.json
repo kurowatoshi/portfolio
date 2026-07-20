@@ -2,7 +2,7 @@
   "projects": [
     {
       "year": "2025",
-      "image": "./assets/brgylink/dashboard.png",
+      "image": "./assets/brgyLink/dashboard.png",
       "category": "Web application",
       "name": "BrgyLink",
       "shortDescription": "A simple information and service portal designed for barangays, built using Bootstrap 5 and ASP.NET Core Razor Pages with C#. The project provides a user-friendly interface for barangay management and services.",
@@ -22,27 +22,27 @@
       ],
       "images": [
         {
-          "src": "./assets/brgylink/dashboard.png",
+          "src": "./assets/brgyLink/dashboard.png",
           "alt": "BrgyLink administration dashboard"
         },
         {
-          "src": "./assets/brgylink/homepage.png",
+          "src": "./assets/brgyLink/homepage.png",
           "alt": "BrgyLink homepage"
         },
         {
-          "src": "./assets/brgylink/homepage1.png",
+          "src": "./assets/brgyLink/homepage1.png",
           "alt": "BrgyLink homepage information"
         },
         {
-          "src": "./assets/brgylink/services.png",
+          "src": "./assets/brgyLink/services.png",
           "alt": "BrgyLink barangay services"
         },
         {
-          "src": "./assets/brgylink/about.png",
+          "src": "./assets/brgyLink/about.png",
           "alt": "BrgyLink about page"
         },
         {
-          "src": "./assets/brgylink/cert.png",
+          "src": "./assets/brgyLink/cert.png",
           "alt": "BrgyLink certificate application"
         }
       ]
