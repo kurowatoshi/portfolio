@@ -49,7 +49,7 @@ app.controller("PortfolioController", ["$document", "$http", "$scope", function 
   this.workDateRange = function workDateRange(experience) {
     const start = formatWorkDate(experience.startDate);
     const end = experience.endDate ? formatWorkDate(experience.endDate) : "Current";
-    if(end === "Current") return "Current";
+    if (end === "Current") return "Current";
     if (!start) return end || experience.period || "Add dates";
     return `${start} — ${end || "Current"}`;
   };
@@ -189,15 +189,18 @@ app.controller("PortfolioController", ["$document", "$http", "$scope", function 
   };
 
   this.goToSlide = function goToSlide(index) {
+    if (!vm.selectedProject || !vm.selectedProject.images) return;
     vm.activeSlide = index;
   };
 
   this.previousSlide = function previousSlide() {
+    if (!vm.selectedProject || !vm.selectedProject.images || !vm.selectedProject.images.length) return;
     const count = vm.selectedProject.images.length;
     vm.activeSlide = (vm.activeSlide - 1 + count) % count;
   };
 
   this.nextSlide = function nextSlide() {
+    if (!vm.selectedProject || !vm.selectedProject.images || !vm.selectedProject.images.length) return;
     const count = vm.selectedProject.images.length;
     vm.activeSlide = (vm.activeSlide + 1) % count;
   };

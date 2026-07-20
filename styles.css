@@ -1007,16 +1007,19 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  min-height: 22px;
   margin: -2px 0 24px;
 }
 
 .gallery-pagination button {
   width: 7px;
   height: 7px;
+  flex: 0 0 auto;
   padding: 0;
   border: 0;
   border-radius: 999px;
   background: #ff3945;
+  cursor: pointer;
   opacity: 0.35;
   transition: width 220ms ease, opacity 180ms ease, background 180ms ease;
 }

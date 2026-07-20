@@ -275,7 +275,8 @@
           <button
             type="button"
             class="gallery-arrow gallery-previous"
-            ng-click="vm.previousSlide()"
+            ng-if="vm.selectedProject.images.length > 1"
+            ng-click="vm.previousSlide(); $event.stopPropagation()"
             aria-label="Previous project image"
           >
             <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
@@ -283,19 +284,25 @@
           <button
             type="button"
             class="gallery-arrow gallery-next"
-            ng-click="vm.nextSlide()"
+            ng-if="vm.selectedProject.images.length > 1"
+            ng-click="vm.nextSlide(); $event.stopPropagation()"
             aria-label="Next project image"
           >
             <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
 
-        <div class="gallery-pagination" role="tablist" aria-label="Project images">
+        <div
+          class="gallery-pagination"
+          ng-if="vm.selectedProject.images.length > 1"
+          role="tablist"
+          aria-label="Project images"
+        >
           <button
             type="button"
             ng-repeat="image in vm.selectedProject.images track by $index"
             ng-class="{ active: vm.activeSlide === $index }"
-            ng-click="vm.goToSlide($index)"
+            ng-click="vm.goToSlide($index); $event.stopPropagation()"
             role="tab"
             aria-selected="{{ vm.activeSlide === $index }}"
             aria-label="Show project image {{ $index + 1 }}"
