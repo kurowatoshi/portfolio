@@ -1,439 +1,38 @@
 {
   "projects": [
     {
-      "id": "hospitality-management-system",
-      "name": "Hospitality Management System",
-      "image": "./assets/project-hotel.webp",
-      "imageAlt": "Dark hotel management dashboard with room and reservation information",
-      "images": [
-        {
-          "src": "./assets/project-hotel.webp",
-          "alt": "Complete hotel management dashboard overview"
-        },
-        {
-          "src": "./assets/project-hotel-rooms.webp",
-          "alt": "Hotel room status and occupancy interface detail"
-        },
-        {
-          "src": "./assets/project-hotel-calendar.webp",
-          "alt": "Hotel reservation calendar and revenue chart detail"
-        }
-      ],
-      "shortDescription": "A unified workspace for hotel operations.",
-      "description": "A complete hospitality operations platform that brings reservations, front-desk transactions, guest folios, cashiering, room status, housekeeping, reporting, and daily management workflows into one connected workspace. It is designed to help hotel teams find information quickly, reduce repetitive steps, and keep departments working from consistent operational data throughout the guest journey.",
-      "previewTitle": "Hotel operations, simplified",
-      "preview": "One system connecting front office, rooms, cashiering, and reports.",
+      "year": "2025",
+      "image": "./assets/project-image.webp",
       "category": "Web application",
-      "year": "2026",
-      "challenge": "Hotel teams needed faster access to connected reservation, folio, housekeeping, and reporting workflows.",
-      "solution": "Built a clear operational interface backed by reliable APIs and structured SQL workflows.",
+      "name": "BrgyLink",
+      "shortDescription": "A simple information and service portal designed for barangays, built using Bootstrap 5 and ASP.NET Core Razor Pages with C#. The project provides a user-friendly interface for barangay management and services.",
+      "description": "# 📋 Barangay Information & Service Portal\n\nA **simple** information and service portal designed for barangays, built using **Bootstrap 5** and **ASP.NET Core Razor Pages** with **C#**. The project provides a user-friendly interface for barangay management and services.\n\n---\n\n## 🌟 Features\n\n- 🧑‍🤝‍🧑 **Resident Management**: Maintain a database of residents, including personal information and residency status, for efficient tracking and management.\n- 📄 **Document Services**: Simplified application process for certificates like barangay clearance and residency certificates.\n- 🚔 **Blotter Management**: Record and track incidents reported to the barangay for improved public safety.\n- 💳 **Payment System**: Accept payments for services (e.g., certificate fees) via **GCash** or other methods.\n- 📊 **Reports**: Generate reports on resident data, incidents, and financial transactions to aid in planning and decision-making.\n- 🤖 **Chatbot AI (FAQs)**: 24/7 AI chatbot for quick responses to common resident inquiries.\n- 🔒 **User Access Control**: Manage roles and permissions for barangay officials and residents to secure sensitive data.\n- 📝 **Announcements**: Post announcements and updates for residents.\n- 🔍 **Searchable Records**: Quickly search through records using various criteria.\n- 🌐 **Responsive Design**: Mobile-friendly UI with **Bootstrap 5**.",
+      "previewTitle": "Unified BrgyLink",
+      "preview": "A simple information and service portal designed for barangays, built using Bootstrap 5 and ASP.NET Core Razor Pages with C#. The project provides a user-friendly interface for barangay management and services.",
+      "challenge": "One man developer, Lack of time due to OJT.",
+      "solution": "Managed my time and split tasks that is assigned day by day",
+      "imageAlt": "BrgyLink",
+      "id": "brgylink",
       "tech": [
+        "ASP.NET Web Razor Page",
         "C#",
-        "AngularJS",
-        "SQL"
-      ]
-    },
-    {
-      "id": "point-of-sale-platform",
-      "name": "Point of Sale Platform",
-      "image": "./assets/project-pos.webp",
-      "imageAlt": "Dark restaurant point of sale interface with menu and order cart",
-      "images": [
-        {
-          "src": "./assets/project-pos.webp",
-          "alt": "Complete restaurant point of sale interface overview"
-        },
-        {
-          "src": "./assets/project-pos-menu.webp",
-          "alt": "Restaurant menu selection interface detail"
-        },
-        {
-          "src": "./assets/project-pos-cart.webp",
-          "alt": "Point of sale order cart and payment interface detail"
-        }
-      ],
-      "shortDescription": "Fast ordering and payment for restaurant teams.",
-      "description": "A responsive point-of-sale platform created for fast-paced restaurant operations, covering menu browsing, order entry, modifiers, table service, discounts, payments, receipts, and transaction history. The interface keeps the most important actions easy to reach while dependable API-driven workflows help staff process orders accurately during both regular service and high-volume periods.",
-      "previewTitle": "Designed for service speed",
-      "preview": "Responsive order entry, payment flows, and real-time operational data.",
-      "category": "POS platform",
-      "year": "2026",
-      "challenge": "Restaurant users needed a responsive interface that remained clear during high-volume service.",
-      "solution": "Designed focused ordering flows and API-driven transactions for desktop and mobile devices.",
-      "tech": [
-        "AngularJS",
-        "REST API"
-      ]
-    },
-    {
-      "id": "business-integrations",
-      "name": "Business Integrations",
-      "image": "./assets/project-integrations.webp",
-      "imageAlt": "Dark integration monitoring dashboard with connected systems",
-      "images": [
-        {
-          "src": "./assets/project-integrations.webp",
-          "alt": "Complete system integration monitoring dashboard overview"
-        },
-        {
-          "src": "./assets/project-integrations-flow.webp",
-          "alt": "Connected system and API data flow detail"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "API performance metrics and activity detail"
-        }
-      ],
-      "shortDescription": "APIs connecting software, devices, and services.",
-      "description": "A maintainable integration layer that connects property systems, business applications, physical devices, and third-party services through structured APIs and dependable data exchange. It includes validation, activity monitoring, useful error reporting, recovery handling, and clear integration boundaries so connected systems remain easier to troubleshoot, maintain, and extend as operational requirements grow.",
-      "previewTitle": "Systems working together",
-      "preview": "Stable integration layers for property platforms, devices, and partner APIs.",
-      "category": "API integration",
-      "year": "2026",
-      "challenge": "Different platforms and devices required consistent data exchange and dependable error handling.",
-      "solution": "Implemented maintainable integration services with validation, logging, and clear recovery paths.",
-      "tech": [
-        ".NET",
-        "JSON",
-        "API"
-      ]
-    },
-    {
-      "id": "sample-inventory-tracker",
-      "name": "Sample: Inventory & Stock Tracker",
-      "image": "./assets/project-hotel.webp",
-      "imageAlt": "Preview of Sample: Inventory & Stock Tracker",
-      "images": [
-        {
-          "src": "./assets/project-hotel.webp",
-          "alt": "Main preview of Sample: Inventory & Stock Tracker"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Inventory & Stock Tracker"
-        }
-      ],
-      "shortDescription": "A practical inventory workspace for tracking stock movement, reorder levels, suppliers, and warehouse activity.",
-      "description": "A practical inventory workspace for tracking stock movement, reorder levels, suppliers, and warehouse activity. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Inventory visibility in one place",
-      "preview": "Inventory visibility in one place. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "AngularJS",
         "SQL",
-        "REST API"
-      ]
-    },
-    {
-      "id": "sample-appointment-scheduling",
-      "name": "Sample: Appointment Scheduling",
-      "image": "./assets/project-pos.webp",
-      "imageAlt": "Preview of Sample: Appointment Scheduling",
+        "Bootstrap",
+        "Entity Framework Core"
+      ],
       "images": [
         {
-          "src": "./assets/project-pos.webp",
-          "alt": "Main preview of Sample: Appointment Scheduling"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Appointment Scheduling"
+          "src": "./assets/project-image.webp",
+          "alt": "BrgyLink"
         }
-      ],
-      "shortDescription": "A responsive scheduling system for managing availability, appointments, reminders, and customer records.",
-      "description": "A responsive scheduling system for managing availability, appointments, reminders, and customer records. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Scheduling made simple",
-      "preview": "Scheduling made simple. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "AngularJS",
-        "API",
-        "JavaScript"
-      ]
-    },
-    {
-      "id": "sample-attendance-portal",
-      "name": "Sample: Employee Attendance Portal",
-      "image": "./assets/project-integrations.webp",
-      "imageAlt": "Preview of Sample: Employee Attendance Portal",
-      "images": [
-        {
-          "src": "./assets/project-integrations.webp",
-          "alt": "Main preview of Sample: Employee Attendance Portal"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Employee Attendance Portal"
-        }
-      ],
-      "shortDescription": "A centralized attendance portal covering schedules, time records, leave requests, and team summaries.",
-      "description": "A centralized attendance portal covering schedules, time records, leave requests, and team summaries. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Clear workforce records",
-      "preview": "Clear workforce records. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "C#",
-        ".NET",
-        "SQL"
-      ]
-    },
-    {
-      "id": "sample-sales-dashboard",
-      "name": "Sample: Sales Analytics Dashboard",
-      "image": "./assets/project-hotel-calendar.webp",
-      "imageAlt": "Preview of Sample: Sales Analytics Dashboard",
-      "images": [
-        {
-          "src": "./assets/project-hotel-calendar.webp",
-          "alt": "Main preview of Sample: Sales Analytics Dashboard"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Sales Analytics Dashboard"
-        }
-      ],
-      "shortDescription": "A reporting dashboard that turns sales activity into readable trends, comparisons, and operational insights.",
-      "description": "A reporting dashboard that turns sales activity into readable trends, comparisons, and operational insights. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Sales data at a glance",
-      "preview": "Sales data at a glance. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "AngularJS",
-        "Charts",
-        "JSON"
-      ]
-    },
-    {
-      "id": "sample-support-ticketing",
-      "name": "Sample: Customer Support Ticketing",
-      "image": "./assets/project-pos-cart.webp",
-      "imageAlt": "Preview of Sample: Customer Support Ticketing",
-      "images": [
-        {
-          "src": "./assets/project-pos-cart.webp",
-          "alt": "Main preview of Sample: Customer Support Ticketing"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Customer Support Ticketing"
-        }
-      ],
-      "shortDescription": "A structured ticketing workflow for assigning issues, tracking progress, and documenting customer resolutions.",
-      "description": "A structured ticketing workflow for assigning issues, tracking progress, and documenting customer resolutions. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Organized customer support",
-      "preview": "Organized customer support. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "REST API",
-        "SQL",
-        "UI Design"
-      ]
-    },
-    {
-      "id": "sample-booking-portal",
-      "name": "Sample: Online Booking Portal",
-      "image": "./assets/project-hotel-rooms.webp",
-      "imageAlt": "Preview of Sample: Online Booking Portal",
-      "images": [
-        {
-          "src": "./assets/project-hotel-rooms.webp",
-          "alt": "Main preview of Sample: Online Booking Portal"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Online Booking Portal"
-        }
-      ],
-      "shortDescription": "A customer-facing booking experience with availability, confirmation, account details, and responsive layouts.",
-      "description": "A customer-facing booking experience with availability, confirmation, account details, and responsive layouts. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Fast online reservations",
-      "preview": "Fast online reservations. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        "AngularJS",
-        "C#",
-        "API"
-      ]
-    },
-    {
-      "id": "sample-approval-workflow",
-      "name": "Sample: Document Approval Workflow",
-      "image": "./assets/project-integrations-flow.webp",
-      "imageAlt": "Preview of Sample: Document Approval Workflow",
-      "images": [
-        {
-          "src": "./assets/project-integrations-flow.webp",
-          "alt": "Main preview of Sample: Document Approval Workflow"
-        },
-        {
-          "src": "./assets/project-integrations-metrics.webp",
-          "alt": "Detail view of Sample: Document Approval Workflow"
-        }
-      ],
-      "shortDescription": "A digital approval system with review stages, status tracking, comments, and clear document history.",
-      "description": "A digital approval system with review stages, status tracking, comments, and clear document history. This sample project is included to test responsive card wrapping, pagination, hover previews, and the complete project-details modal. Replace or delete it when you add your real portfolio work.",
-      "previewTitle": "Approvals without confusion",
-      "preview": "Approvals without confusion. Open the modal to verify the gallery animation and longer project information.",
-      "category": "Pagination demo",
-      "year": "2026",
-      "challenge": "This demonstration entry provides enough project cards to activate and test the eight-item pagination behavior.",
-      "solution": "It uses the same JSON structure, modal gallery, hover preview, and responsive layout as a real project.",
-      "tech": [
-        ".NET",
-        "JSON",
-        "SQL"
       ]
     }
   ],
-  "blogs": [
-    {
-      "id": "building-reliable-business-applications",
-      "title": "Building Reliable Business Applications",
-      "publishedAt": "",
-      "excerpt": "Practical notes on turning operational requirements into software that stays clear and dependable.",
-      "paragraphs": [
-        "Reliable business software starts with understanding how people actually complete their work. Clear workflows, predictable behavior, and useful feedback matter more than unnecessary complexity.",
-        "I break large requirements into focused modules, keep data contracts consistent, and test the failure paths as carefully as the successful ones. This makes each feature easier to maintain and improve."
-      ],
-      "tags": [
-        "Development",
-        "Architecture"
-      ]
-    },
-    {
-      "id": "designing-interfaces-for-busy-teams",
-      "title": "Designing Interfaces for Busy Teams",
-      "publishedAt": "",
-      "excerpt": "A simple approach to designing focused workflows for hospitality and restaurant users.",
-      "paragraphs": [
-        "Interfaces for busy teams should make the next action obvious. Strong hierarchy, concise labels, and fewer interruptions help users stay focused during demanding operations.",
-        "Responsive layouts should preserve that clarity on every screen size. I design around the task first, then refine spacing, feedback, and visual details without adding distraction."
-      ],
-      "tags": [
-        "UI Design",
-        "Workflow"
-      ]
-    },
-    {
-      "id": "sample-clean-angularjs",
-      "title": "Sample: Keeping AngularJS Features Maintainable",
-      "publishedAt": "2026-07-17T09:00",
-      "excerpt": "Ways to organize controllers, data, and reusable UI behavior as a project grows.",
-      "paragraphs": [
-        "Ways to organize controllers, data, and reusable UI behavior as a project grows.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "AngularJS",
-        "Development"
-      ]
-    },
-    {
-      "id": "sample-api-errors",
-      "title": "Sample: Designing Better API Error Messages",
-      "publishedAt": "2026-07-16T13:30",
-      "excerpt": "Notes on making API failures understandable for users and useful for developers.",
-      "paragraphs": [
-        "Notes on making API failures understandable for users and useful for developers.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "API",
-        "UX"
-      ]
-    },
-    {
-      "id": "sample-sql-workflows",
-      "title": "Sample: Practical SQL for Business Workflows",
-      "publishedAt": "2026-07-15T10:15",
-      "excerpt": "A straightforward look at queries and data structures used by operational systems.",
-      "paragraphs": [
-        "A straightforward look at queries and data structures used by operational systems.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "SQL",
-        "Backend"
-      ]
-    },
-    {
-      "id": "sample-responsive-forms",
-      "title": "Sample: Responsive Forms That Stay Clear",
-      "publishedAt": "2026-07-14T16:45",
-      "excerpt": "How spacing, grouping, and feedback keep longer forms usable across screen sizes.",
-      "paragraphs": [
-        "How spacing, grouping, and feedback keep longer forms usable across screen sizes.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "UI Design",
-        "Responsive"
-      ]
-    },
-    {
-      "id": "sample-pos-speed",
-      "title": "Sample: Improving Point-of-Sale Speed",
-      "publishedAt": "2026-07-13T11:20",
-      "excerpt": "Small interface and data-flow decisions that make restaurant transactions feel faster.",
-      "paragraphs": [
-        "Small interface and data-flow decisions that make restaurant transactions feel faster.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "POS",
-        "Performance"
-      ]
-    },
-    {
-      "id": "sample-hotel-data",
-      "title": "Sample: Connecting Hotel Operations Data",
-      "publishedAt": "2026-07-12T08:10",
-      "excerpt": "Thoughts on keeping reservations, rooms, folios, and reports working from consistent data.",
-      "paragraphs": [
-        "Thoughts on keeping reservations, rooms, folios, and reports working from consistent data.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "Hospitality",
-        "Integration"
-      ]
-    },
-    {
-      "id": "sample-debugging",
-      "title": "Sample: A Calm Approach to Debugging",
-      "publishedAt": "2026-07-11T14:00",
-      "excerpt": "A repeatable process for narrowing problems, validating assumptions, and documenting fixes.",
-      "paragraphs": [
-        "A repeatable process for narrowing problems, validating assumptions, and documenting fixes.",
-        "This sample article is included to activate blog pagination and test the blog modal. Replace this text or delete the entry when your real article is ready."
-      ],
-      "tags": [
-        "Debugging",
-        "Development"
-      ]
-    }
-  ],
+  "blogs": [],
   "profile": {
-    "name": "Pyanz Jheo Quiros",
+    "name": "Pyanz Jheo C. Quiros",
     "role": "Software Developer",
-    "availability": "Available for select projects",
+    "availability": "Sipping my coffe ☕",
     "intro": "I build reliable business applications and clean digital experiences, turning complex requirements into software that feels simple to use.",
     "details": [
       {
@@ -442,7 +41,7 @@
       },
       {
         "label": "Focus",
-        "value": "Web & business systems"
+        "value": "Software"
       },
       {
         "label": "Experience",
@@ -454,65 +53,65 @@
     {
       "name": "LinkedIn",
       "icon": "fa-brands fa-linkedin-in",
-      "url": "https://www.linkedin.com/in/your-profile",
+      "url": "https://www.linkedin.com/in/pyanz-jheo-quiros-60576a341/",
       "external": true
     },
     {
       "name": "Instagram",
       "icon": "fa-brands fa-instagram",
-      "url": "https://www.instagram.com/your-username",
+      "url": "https://www.instagram.com/pjquiros",
       "external": true
     },
     {
       "name": "Facebook",
       "icon": "fa-brands fa-facebook-f",
-      "url": "https://www.facebook.com/your-profile",
+      "url": "https://www.facebook.com/pjquiros.11",
       "external": true
     },
     {
       "name": "Email",
       "icon": "fa-solid fa-envelope",
-      "url": "mailto:your-email@example.com",
+      "url": "mailto:pyanzjheoquiros8@gmail.com",
       "external": false
     }
   ],
   "educationHistory": [
     {
-      "course": "Bachelor’s Degree in Information Technology",
-      "school": "Add college or university",
+      "course": "Bachelor’s Degree in Computer Science",
+      "school": "Asian College of Technology",
       "location": "Cebu, Philippines",
-      "period": "Add year",
-      "description": "Academic foundation in programming, databases, systems analysis, and software development."
-    },
-    {
-      "course": "Secondary Education",
-      "school": "Add school name",
-      "location": "Cebu, Philippines",
-      "period": "Add year",
-      "description": "Add your academic strand, awards, or other relevant details."
+      "period": "2025",
+      "description": "Graduated in BSCS/Bachelor of Science in Computer Science"
     }
   ],
   "workExperiences": [
     {
       "role": "Software Developer",
       "company": "Jinisys Software Inc.",
-      "startDate": "",
+      "startDate": "2025-11",
       "endDate": "",
       "description": "Developing hospitality and business systems using C#, AngularJS, SQL Server, APIs, and responsive interface design."
     },
     {
-      "role": "Add job title",
-      "company": "Add company name",
-      "startDate": "",
-      "endDate": "",
-      "description": "Add your main responsibilities and achievements for this role."
+      "startDate": "2023-04",
+      "endDate": "2023-06",
+      "role": "Call Center Agent",
+      "company": "Virtual Buddy 24/7",
+      "description": "Accounts Handled: ACA NO Cost (Healthcare Account), ACA Helpline Account, MME Account"
     },
     {
-      "role": "Add job title",
-      "company": "Add company name",
-      "startDate": "",
-      "endDate": "",
-      "description": "Add your main responsibilities and achievements for this role."
+      "startDate": "2024-06",
+      "endDate": "2024-10",
+      "role": "Freelance Website Developer",
+      "company": "Self-employed",
+      "description": "Delivered fully responsive, functional websites on a per-project basis handling both frontend and backend development ensuring client satisfaction and timely delivery."
+    },
+    {
+      "startDate": "2025-03",
+      "endDate": "2025-05",
+      "role": "IT Support Technician",
+      "company": "RE-CJC Flaminia Realty",
+      "description": "Provides hands-on technical support by diagnosing and repairing computers, printers, and network peripherals. Ensures smooth daily operations through timely troubleshooting and preventive maintenance."
     }
   ],
   "skills": [
@@ -539,6 +138,50 @@
     {
       "name": "UI Design",
       "icon": "fa-solid fa-layer-group"
+    },
+    {
+      "icon": "fa-brands fa-html5",
+      "name": "HTML"
+    },
+    {
+      "icon": "fa-solid fa-database",
+      "name": "MySQL"
+    },
+    {
+      "icon": "fa-solid fa-bolt",
+      "name": "Supabase"
+    },
+    {
+      "icon": "fa-solid fa-fire-flame-curved",
+      "name": "Firebase"
+    },
+    {
+      "icon": "fa-brands fa-microsoft",
+      "name": "Xamarin"
+    },
+    {
+      "icon": "fa-brands fa-windows",
+      "name": "C# Windows Forms"
+    },
+    {
+      "icon": "fa-solid fa-chart-column",
+      "name": "Tableau"
+    },
+    {
+      "icon": "fa-solid fa-cubes",
+      "name": "Odoo"
+    },
+    {
+      "icon": "fa-solid fa-chart-pie",
+      "name": "SAP Crystal Reports"
+    },
+    {
+      "icon": "fa-brands fa-android",
+      "name": "Android (Native)"
+    },
+    {
+      "icon": "fa-solid fa-mobile-screen-button",
+      "name": ".NET MAUI"
     }
   ]
 }
