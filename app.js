@@ -33,7 +33,7 @@ app.controller("PortfolioController", ["$document", "$http", "$scope", function 
   this.workDateRange = function workDateRange(experience) {
     const start = formatWorkDate(experience.startDate);
     const end = experience.endDate ? formatWorkDate(experience.endDate) : "Current";
-    if(end === "Current") start = "";
+    if(end === "Current") return "Current";
     if (!start) return end || experience.period || "Add dates";
     return `${start} — ${end || "Current"}`;
   };
