@@ -264,12 +264,9 @@
           aria-label="Project image gallery"
         >
           <img
-            class="modal-image"
-            ng-repeat="image in vm.selectedProject.images track by $index"
-            ng-class="{ 'active': vm.activeSlide == $index }"
-            ng-src="{{ image.src }}"
-            alt="{{ image.alt }}"
-            aria-hidden="{{ vm.activeSlide != $index }}"
+            class="modal-image active"
+            ng-src="{{ vm.selectedProject.images[vm.activeSlide].src }}"
+            alt="{{ vm.selectedProject.images[vm.activeSlide].alt || vm.selectedProject.name }}"
           />
 
           <button
@@ -301,7 +298,6 @@
           <button
             type="button"
             ng-repeat="image in vm.selectedProject.images track by $index"
-            ng-class="{ 'active': vm.activeSlide == $index }"
             ng-click="vm.activeSlide = $index; $event.stopPropagation()"
             role="tab"
             aria-selected="{{ vm.activeSlide == $index }}"

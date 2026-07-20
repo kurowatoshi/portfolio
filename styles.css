@@ -1077,6 +1077,12 @@ body {
   background: #ff3945;
 }
 
+.gallery-pagination button[aria-selected="true"] {
+  width: 22px;
+  opacity: 1;
+  background: #ff3945;
+}
+
 .modal-summary {
   margin: 0;
   color: var(--muted);

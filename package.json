@@ -1,6 +1,6 @@
 {
   "name": "pyanz-jheo-angularjs-portfolio",
-  "version": "30.0.0",
+  "version": "34.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
