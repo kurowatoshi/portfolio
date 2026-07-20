@@ -260,16 +260,16 @@
         <h2 id="project-modal-title">{{ vm.selectedProject.name }}</h2>
         <div
           class="modal-gallery"
-          ng-class="{ 'is-first': vm.activeSlide === 0 }"
+          ng-class="{ 'is-first': vm.activeSlide == 0 }"
           aria-label="Project image gallery"
         >
           <img
             class="modal-image"
             ng-repeat="image in vm.selectedProject.images track by $index"
-            ng-class="{ active: vm.activeSlide === $index }"
+            ng-class="{ 'active': vm.activeSlide == $index }"
             ng-src="{{ image.src }}"
             alt="{{ image.alt }}"
-            aria-hidden="{{ vm.activeSlide !== $index }}"
+            aria-hidden="{{ vm.activeSlide != $index }}"
           />
 
           <button
@@ -301,10 +301,10 @@
           <button
             type="button"
             ng-repeat="image in vm.selectedProject.images track by $index"
-            ng-class="{ active: vm.activeSlide === $index }"
-            ng-click="vm.goToSlide($index); $event.stopPropagation()"
+            ng-class="{ 'active': vm.activeSlide == $index }"
+            ng-click="vm.activeSlide = $index; $event.stopPropagation()"
             role="tab"
-            aria-selected="{{ vm.activeSlide === $index }}"
+            aria-selected="{{ vm.activeSlide == $index }}"
             aria-label="Show project image {{ $index + 1 }}"
           ></button>
         </div>
