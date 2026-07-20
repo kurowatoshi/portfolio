@@ -46,6 +46,82 @@
           "alt": "BrgyLink certificate application"
         }
       ]
+    },
+    {
+      "year": "2025",
+      "image": "https://kloudhotels.com/wp-content/uploads/2019/02/Kloudhotels-Screenshot.png",
+      "category": "Web application",
+      "name": "Kloudhotels",
+      "imageAlt": "Kloudhotels",
+      "shortDescription": "KloudHotels is a cloud-based hotel management system that simplifies reservations, front-office operations, housekeeping, cashiering, inventory, reporting, and third-party integrations.",
+      "description": "KloudHotels is a cloud-based Property Management System designed to help hotels manage their daily operations efficiently. It provides tools for handling reservations, guest check-ins and check-outs, room availability, housekeeping, cashiering, billing, inventory, reports, and other hotel activities.\n\nThe system centralizes important hotel information, allowing employees to access real-time data and coordinate tasks across different departments. It also supports integrations with online booking channels, keycard systems, payment services, point-of-sale systems, and accounting platforms.\n\nWith its user-friendly interface and automated processes, KloudHotels helps reduce manual work, minimize errors, improve staff productivity, and provide better service to guests. It is suitable for different hospitality businesses, including hotels, resorts, inns, and boutique properties.",
+      "previewTitle": "Kloudhotels",
+      "preview": "A cloud-based hotel management system for handling reservations, front-office operations, housekeeping, cashiering, inventory, integrations, and reports.",
+      "challenge": "Old tech-stack",
+      "solution": "Read documentation online",
+      "id": "kloudhotels",
+      "tech": [
+        "AngularJS",
+        "C# Razor Page",
+        "SQL",
+        "SAP Crystal Reports"
+      ],
+      "images": [
+        {
+          "src": "https://kloudhotels.com/wp-content/uploads/2019/02/Kloudhotels-Screenshot.png",
+          "alt": "Kloudhotels"
+        }
+      ]
+    },
+    {
+      "year": "2025",
+      "image": "./assets/restoplus/resto.png",
+      "category": "Windows Application",
+      "preview": "RestoPlus is a restaurant point-of-sale and management system that simplifies order taking, billing, kitchen coordination, payments, inventory monitoring, and sales reporting.",
+      "name": "RestoPlus",
+      "description": "RestoPlus is a comprehensive restaurant Point-of-Sale and management system designed to improve the speed, accuracy, and efficiency of food and beverage operations. It supports dine-in, takeout, and delivery transactions while providing tools for table management, order processing, discounts, payments, kitchen printing, cashier shifts, and sales reporting.\n\nThe system also includes a mobile order-taking application that allows restaurant staff to send customer orders directly from the dining area. Its inventory and item-availability features help monitor stocks and prevent unavailable products from being ordered.\n\nRestoPlus can integrate with accounting and inventory platforms such as Odoo to synchronize contacts, transactions, invoices, payments, and stock information. It helps restaurants reduce manual processes, improve kitchen coordination, provide faster customer service, and maintain accurate operational records.",
+      "shortDescription": "A restaurant POS system for managing orders, tables, payments, kitchen printing, inventory, mobile order taking, integrations, and reports.",
+      "previewTitle": "RestoPlus",
+      "imageAlt": "RestoPlus",
+      "challenge": "None",
+      "solution": "None",
+      "id": "restoplus",
+      "tech": [
+        "C# Winforms",
+        "MySQL",
+        "SAP Crystal Reports"
+      ],
+      "images": [
+        {
+          "src": "./assets/restoplus/resto.png",
+          "alt": "RestoPlus"
+        }
+      ]
+    },
+    {
+      "year": "2026",
+      "image": "./assets/ordertaker/order.png",
+      "category": "Android Application",
+      "shortDescription": "An Android mobile ordering application for managing tables, selecting menu items, checking availability, adding special requests, and sending orders directly to the POS and kitchen.",
+      "preview": "Resto Order Taker is a mobile application that allows restaurant staff to take customer orders directly at the table and send them to the RestoPlus POS system for faster and more accurate processing.",
+      "description": "Resto Order Taker is an Android mobile application designed to improve the restaurant ordering process. It allows waiters and service staff to manage tables, enter the number of guests, browse menu categories, select food and beverage items, apply modifiers, add combo meals, include special instructions, and review orders before submission.\n\nOrders entered through the application are sent directly to the RestoPlus POS system for processing and kitchen printing. This reduces manual order encoding, minimizes communication errors, improves coordination between service staff and the kitchen, and shortens customer waiting time.\n\nThe application also supports item-availability checking, order updates, device configuration, user authentication, local data storage, and transaction synchronization. Its offline capabilities allow staff to continue using essential functions during temporary network interruptions and synchronize the data once the connection becomes available.\n\nResto Order Taker helps restaurants provide faster service, maintain accurate customer orders, and create a more efficient connection between dining-area staff, cashiers, and kitchen personnel.",
+      "previewTitle": "Resto OrderTaker",
+      "name": "Resto OrderTaker",
+      "challenge": "Lack of experience in android development",
+      "solution": "Read documentation for java",
+      "imageAlt": "Resto OrderTaker",
+      "id": "resto-ordertaker",
+      "tech": [
+        "AndroidNative",
+        "Java",
+        "RealmDB"
+      ],
+      "images": [
+        {
+          "src": "./assets/ordertaker/order.png",
+          "alt": "Resto OrderTaker"
+        }
+      ]
     }
   ],
   "blogs": [
@@ -97,6 +173,102 @@
         "Playing online games gives me time to have fun. Working at the office allows me to improve my skills and solve meaningful problems. Jogging keeps me active, while cooking and watching movies help me relax at home.",
         "Being a software developer can be challenging, especially when I encounter complicated errors or urgent tasks. However, it can also be rewarding. Every problem I solve teaches me something new and helps me become a better developer.",
         "At the end of the day, my life is not entirely about programming. It is also about enjoying my hobbies, taking care of my health, preparing my own meals, and giving myself enough time to rest. This routine helps me prepare for another day of challenges and opportunities."
+      ]
+    },
+    {
+      "publishedAt": "2026-07-20T06:25:00.000Z",
+      "title": "Debugging My Hardest Issue: The “No Rooms Available” Bug",
+      "excerpt": "The system displayed “No Rooms Available” even though vacant rooms appeared on the room calendar. After tracing the request from AngularJS to the C# API and SQL Server, I discovered that the availability query treated the checkout date as an occupied night.\n\nChanging the overlap comparison from inclusive to exclusive and normalizing the date values fixed the issue. Rooms checking out on a particular date could then be assigned to new guests arriving on that same date.",
+      "id": "debugging-my-hardest-issue-the-no-rooms-available-bug",
+      "tags": [
+        "Development"
+      ],
+      "paragraphs": [
+        "One of the most difficult bugs I encountered as a software developer appeared to be a simple availability problem. A user tried to create a hotel reservation, selected the arrival and departure dates, and searched for an available room.",
+        "Instead of displaying the available room types, the system returned the message:",
+        "No Rooms Available",
+        "At first, the message seemed correct. It normally appears when all rooms are occupied, reserved, blocked, or out of service. However, the hotel staff confirmed that several rooms were vacant for the selected dates.",
+        "The room calendar also showed available rooms, but the reservation form showed none. This inconsistency made the issue difficult to understand.",
+        "Understanding the Problem",
+        "The first step was to reproduce the problem. I used the same hotel, room type, arrival date, departure date, booking source, and number of guests provided by the user.",
+        "The problem occurred exactly as reported. The room calendar displayed vacant rooms, but searching through the reservation form returned no results.",
+        "I tested other dates and noticed that the issue did not happen all the time. Some date ranges returned the correct rooms, while others displayed “No Rooms Available.” This meant that the room configuration itself was probably not the main problem.",
+        "The issue appeared only when a new guest’s arrival date was the same as another guest’s departure date.",
+        "For example:",
+        "Existing reservation: July 15 to July 17\nNew reservation: July 17 to July 19",
+        "From a hotel operations perspective, this should be allowed. The existing guest checks out on July 17, and the new guest can check in later that day. However, the system treated the two reservations as overlapping.",
+        "Checking the Front End",
+        "I started by checking the AngularJS code responsible for sending the availability request.",
+        "I verified the following values:",
+        "Hotel ID\nRoom type\nArrival date\nDeparture date\nNumber of adults and children\nReservation source\nSelected rate\nBooking status",
+        "The request contained the correct information. The arrival and departure dates were also displayed correctly in the user interface.",
+        "I added logs before sending the request and confirmed that AngularJS was passing the expected values to the API. This eliminated the front end as the primary cause.",
+        "Inspecting the API",
+        "Next, I checked the C# API that received the availability request. I added temporary logging to record the parameters before they were passed to the database.",
+        "The API received the correct hotel ID and date range. The date conversion also appeared correct, although some values still contained a time component.",
+        "For example:",
+        "Arrival Date: 2026-07-17 00:00:00\nDeparture Date: 2026-07-19 00:00:00",
+        "There was no API exception, validation error, or failed database connection. The API successfully executed the availability query, but the database returned zero available rooms.",
+        "At this point, the investigation moved to SQL Server.",
+        "Investigating the Availability Query",
+        "The room availability process used several sources of information:",
+        "Room master records\nExisting reservations\nRoom schedules\nOut-of-order and out-of-service records\nRoom transfers\nMaintenance blocks\nChecked-in guests\nCancelled and failed reservations\nArrival and departure dates",
+        "The query needed to determine whether each room had an existing reservation that overlapped with the requested date range.",
+        "The original condition used logic similar to this:",
+        "WHERE ExistingFromDate <= @RequestedToDate\n  AND ExistingToDate >= @RequestedFromDate",
+        "At first glance, the condition looked correct. It checked whether the two date ranges overlapped.",
+        "However, it treated the departure date as an occupied night.",
+        "Consider this existing reservation:",
+        "Arrival: July 15\nDeparture: July 17",
+        "And this new reservation:",
+        "Arrival: July 17\nDeparture: July 19",
+        "The condition evaluated the dates like this:",
+        "ExistingToDate >= RequestedFromDate\nJuly 17 >= July 17",
+        "The result was true. Therefore, the query considered the existing reservation and the new reservation to be overlapping.",
+        "Because the hotel had several rooms checking out on the same date, the query excluded all of them. The reservation form then received an empty list and displayed “No Rooms Available.”",
+        "Why the Bug Was Complicated",
+        "The issue was difficult because the system had several different availability calculations.",
+        "The room calendar displayed occupancy by hotel night, while the reservation form used a separate SQL query. Both features were reading from the same database, but they applied different date-overlap rules.",
+        "The room calendar correctly understood that a checkout date was not an occupied night. The availability query treated both the arrival and departure dates as inclusive.",
+        "The bug was also inconsistent because it only appeared under specific conditions:",
+        "The requested arrival date matched another reservation’s departure date.\nThe room belonged to the requested room type.\nNo other completely vacant room was available.\nThe existing reservation was active and not cancelled.\nThe database value sometimes included a time component.",
+        "If another room was available, the system still returned a result, and the user would not notice the problem. The bug became visible only when the incorrectly excluded rooms were the last available rooms.",
+        "Fixing the Date-Overlap Logic",
+        "For hotel reservations, the departure date should normally be treated as an exclusive boundary. A guest occupies the room starting from the arrival date but not for the entire departure date.",
+        "The corrected overlap condition used this logic:",
+        "WHERE ExistingFromDate < @RequestedToDate\n  AND ExistingToDate > @RequestedFromDate",
+        "The important change was replacing <= and >= with < and >.",
+        "Using the corrected condition:",
+        "Existing departure: July 17\nRequested arrival: July 17",
+        "The comparison became:",
+        "ExistingToDate > RequestedFromDate\nJuly 17 > July 17",
+        "The result was false, which meant the reservations did not overlap.",
+        "This allowed the room to become available for a same-day checkout and check-in.",
+        "Handling the Time Component",
+        "The date-overlap condition fixed the main problem, but I also needed to make the comparison consistent when the database contained time values.",
+        "Some reservations were saved with values such as:",
+        "2026-07-17 00:00:00",
+        "Others contained actual check-in or check-out times:",
+        "2026-07-17 12:00:00",
+        "Depending on the availability rules, comparing full datetime values could create unexpected results. The availability process was based on hotel dates rather than exact times, so the query needed normalized date values.",
+        "The parameters were converted consistently before performing the comparison:",
+        "DECLARE @ArrivalDate DATE = CONVERT(DATE, @RequestedFromDate);\nDECLARE @DepartureDate DATE = CONVERT(DATE, @RequestedToDate);",
+        "The reservation dates used in the availability calculation were also handled using their hotel-date values. This prevented hidden time components from affecting the result.",
+        "Testing the Solution",
+        "After changing the query, I tested several scenarios.",
+        "Same-day room turnover\nExisting booking: July 15 to July 17\nNew booking: July 17 to July 19\nExpected result: Room is available\nActual result after the fix: Room is available\nActual overlapping reservation\nExisting booking: July 15 to July 18\nNew booking: July 17 to July 19\nExpected result: Room is unavailable\nActual result after the fix: Room is unavailable\nBooking before an existing arrival\nExisting booking: July 20 to July 22\nNew booking: July 18 to July 20\nExpected result: Room is available\nActual result after the fix: Room is available\nBooking inside an existing stay\nExisting booking: July 15 to July 20\nNew booking: July 17 to July 19\nExpected result: Room is unavailable\nActual result after the fix: Room is unavailable\nCancelled reservation\nExisting booking status: Cancelled\nSame requested date range\nExpected result: Room is available\nActual result after the fix: Room is available\nOut-of-service room\nRoom status: Out of service\nNo active reservation\nExpected result: Room is unavailable\nActual result after the fix: Room is unavailable",
+        "I also compared the results from the reservation form with the room calendar. Both features finally displayed consistent availability.",
+        "Lessons I Learned",
+        "This issue taught me that a small comparison operator can have a major effect on an entire system. The difference between >= and > looked insignificant, but it determined whether the hotel could sell rooms that were actually available.",
+        "I also learned not to trust a generic error message immediately. “No Rooms Available” was only the final result shown to the user. It did not explain whether the rooms were occupied, blocked, incorrectly filtered, or removed because of a date-calculation problem.",
+        "When debugging an issue like this, it is important to follow the complete data flow:",
+        "Check the values selected by the user.\nInspect the request sent by the front end.\nVerify the parameters received by the API.\nRun the database query manually.\nExamine every filter that removes a room.\nTest the boundary conditions.\nCompare the behavior of related system modules.\nConfirm the fix using different booking scenarios.",
+        "The most important test cases are often found at the boundaries. In this situation, the critical boundary was the moment when one reservation ended and another began.",
+        "Conclusion",
+        "The “No Rooms Available” bug was one of the hardest issues I debugged because there was no application error or failed request. Every part of the system appeared to work correctly, but the final result was wrong.",
+        "The actual cause was an incorrect date-overlap condition that treated the checkout date as an occupied night. Hidden time values made the behavior even more difficult to trace.",
+        "After correcting the overlap logic and normalizing the dates, the reservation form displayed the proper room availability. The room calendar and reservation search also became consistent.",
+        "This experience reminded me that debugging is not only about fixing broken code. It is about understanding the business rules behind the system and making sure that the code represents those rules correctly."
       ]
     }
   ],
