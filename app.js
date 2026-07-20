@@ -18,6 +18,22 @@ app.controller("PortfolioController", ["$document", "$http", "$scope", function 
     return String(value).padStart(2, "0");
   };
 
+  this.projectDescriptionBlocks = function projectDescriptionBlocks(description) {
+    return String(description || "")
+      .split(/\n\s*\n/)
+      .map(function toBlock(value) {
+        const text = value.trim();
+        const feature = /^[•*-]\s*/.test(text);
+        return {
+          feature,
+          text: text.replace(/^[•*-]\s*/, ""),
+        };
+      })
+      .filter(function hasText(block) {
+        return block.text.length > 0;
+      });
+  };
+
   function parseWorkDate(value) {
     const match = String(value || "").match(/^(\d{4})-(\d{2})/);
     return match ? { year: Number(match[1]), month: Number(match[2]) } : null;

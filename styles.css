@@ -1081,6 +1081,34 @@ body {
   line-height: 1.65;
 }
 
+.modal-summary p {
+  margin: 0;
+}
+
+.modal-summary-intro {
+  margin-bottom: 18px !important;
+  color: #c9c8c2;
+  font-size: 0.9rem;
+}
+
+.modal-summary-feature {
+  display: grid;
+  grid-template-columns: 7px 1fr;
+  gap: 11px;
+  margin-top: 8px !important;
+  padding: 10px 12px;
+  border-left: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.modal-summary-dot {
+  width: 5px;
+  height: 5px;
+  margin-top: 0.62em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .modal-detail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

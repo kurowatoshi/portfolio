@@ -301,7 +301,15 @@
             aria-label="Show project image {{ $index + 1 }}"
           ></button>
         </div>
-        <p class="modal-summary">{{ vm.selectedProject.description }}</p>
+        <div class="modal-summary">
+          <p
+            ng-repeat="block in vm.projectDescriptionBlocks(vm.selectedProject.description) track by $index"
+            ng-class="{ 'modal-summary-feature': block.feature, 'modal-summary-intro': !block.feature }"
+          >
+            <span class="modal-summary-dot" ng-if="block.feature" aria-hidden="true"></span>
+            <span>{{ block.text }}</span>
+          </p>
+        </div>
 
         <div class="modal-detail-grid">
           <div>
