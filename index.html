@@ -111,7 +111,8 @@
                     <h3>{{ project.name }}</h3>
                     <p>{{ project.shortDescription }}</p>
                     <div class="tags" aria-label="Project technologies">
-                      <span ng-repeat="tech in project.tech track by tech">{{ tech }}</span>
+                      <span ng-repeat="tech in project.tech | limitTo:3 track by tech">{{ tech }}</span>
+                      <span class="tag-more" ng-if="project.tech.length > 3">+{{ project.tech.length - 3 }}</span>
                     </div>
                   </div>
 

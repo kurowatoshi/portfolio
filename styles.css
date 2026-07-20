@@ -546,8 +546,9 @@ body {
 }
 
 .project {
-  height: 166px;
-  display: block;
+  min-height: 182px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   padding: 12px;
@@ -563,6 +564,15 @@ body {
     border-color 180ms ease,
     background 180ms ease,
     box-shadow 180ms ease;
+}
+
+.project-main {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .project:hover,
@@ -600,9 +610,13 @@ body {
 
 .project-main p {
   margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
   color: var(--quiet);
   font-size: 0.54rem;
   line-height: 1.42;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .tags {
@@ -612,10 +626,9 @@ body {
 }
 
 .tags {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
+  position: static;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
 .tags span {
@@ -625,6 +638,11 @@ body {
   color: #a8a8a2;
   font-size: 0.48rem;
   white-space: nowrap;
+}
+
+.tags .tag-more {
+  border-color: transparent;
+  color: var(--blue);
 }
 
 .project-preview {

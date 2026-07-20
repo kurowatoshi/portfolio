@@ -9,7 +9,7 @@ app.controller("PortfolioController", ["$document", "$http", "$scope", function 
   this.selectedProject = null;
   this.selectedBlog = null;
   this.activeSlide = 0;
-  this.pageSize = 4;
+  this.pageSize = 6;
   this.projectPage = 1;
   this.blogPage = 1;
   this.contentStatus = "Loading content…";
